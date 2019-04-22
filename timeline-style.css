@@ -1,0 +1,196 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sailec, sans-serif;
+}
+
+.content {
+  background-color: white;
+  padding: 10px 30px 10px 5px;
+  border-radius: 0 0 6px 6px;
+  display:none;
+}
+
+.indent {
+text-indent: 10px;
+}
+
+li { 
+font-size:15px;
+  line-height: 22px;
+  padding-bottom:15px;
+}
+
+body {
+  background: #faf7ee;
+}
+section#timeline {
+  width: 70%;
+/*   margin: left; */
+  position: relative;
+}
+section#timeline:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 1%;
+  margin: 0 0 0 0px;
+  width: 3px;
+  height: 100%;
+  background: #04b499;
+}
+section#timeline article {
+  width: 100%;
+  margin: 45px 0px 20px 0;
+  position: relative;
+}
+section#timeline article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+section#timeline article div.inner {
+  width: 50%;
+  float: right;
+  margin: 0px -80px 0 0;
+  padding: -5px 0 0 0;
+  border-radius: 6px;
+}
+section#timeline article div.inner span.date {
+  display: block;
+  width: 60px;
+  height: 50px;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: -20px 0 0 -50px;
+  border-radius:100% ;
+  font-weight: 400;
+  line-height: 0px;
+  text-transform: ;
+  background: #eb7925;
+  color: white;
+  border: 20px solid #eb7925;
+}
+
+section#timeline article div.inner span.dot {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top:10px;
+  left: 50%;
+  margin: 0 0 0 -11px;
+  border-radius:100% ;
+  text-transform: ;
+  background: #1195a1;
+}
+
+section#timeline article div.inner span.highschool {
+  display: block;
+  width: 600px;
+  height: 50px;
+  position: relative;
+  right: 35%;
+  margin: 0px 0 10px -100px;
+  padding: 10px;
+  border-radius:0%;
+  background: #faf7ee;
+}
+
+section#timeline article div.inner span.date span {
+  display: block;
+  text-align: center;
+  padding: 25px 0 0 0px;
+}
+
+section#timeline article div.inner span.hsyear {
+  font-size: 2.5em;
+  font-weight:600;
+  color: #1195a1;
+}
+
+section#timeline article div.inner span.date span.month {
+  font-size: 18px;
+  font-weight:600;
+  margin: -6px 0 0 -6px;
+}
+
+section#timeline article div.inner span.date span.year {
+  font-size: 18px;
+}
+section#timeline article div.inner h2 {
+  padding: 16px 20px 10px 15px;
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align:left;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+}
+section#timeline article div.inner h2:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 398px;
+  	width: 10px; 
+	  height: 10px;
+  -webkit-transform: rotate(-45deg);
+}
+section#timeline article div.inner p {
+  padding: 15px;
+  margin: 0;
+  font-size: 14px;
+  background:white;
+  color: #202022;
+  border-radius: 0 0 6px 6px;
+}
+section#timeline article:nth-child(n) div.inner {
+  float: right;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  left: -5px;
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: black;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: black;
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: orange;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: orange;
+}
+section#timeline article:nth-child(3) div.inner h2 {
+  background: grey;
+}
+section#timeline article:nth-child(3) div.inner h2:after {
+  background: grey;
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: brown;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: brown;
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: #1195a1;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: #1195a1;
+}
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: #1195a1;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: #1195a1;
+}
+
