@@ -2,11 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: sailec, sans-serif;
+  overflow-x:hidden; /* hides the extra whitespace problem*/
 }
 
 .content {
   background: white;
-  padding: 1em; /* This fixed so many of the things. */
+  padding: 1em; /* This fixed so many of the things. (ul has 1em margins by default, it created unwanted white space) */
 /*   border-radius: 0 0 6px 6px; */
 }
 
@@ -25,6 +26,7 @@ body {
 }
 #timeline {
   position: relative;
+  width:100%;
 }
 #timeline:before {
   content: '';
@@ -49,9 +51,9 @@ article:after {
 }
 .inner {
   /* this gets the award for my most hated css attribute, modifying anything here breaks everything. You have been warned. */
-  width: 50%;
+  width: 70%;
 /*   float: right; */
-  margin: 0px -10% 0 0;
+  margin: 0px -35% 0 0;
   padding: -5px 0 0 0;
   border-radius: 6px;
 }
@@ -176,7 +178,7 @@ section#timeline article:nth-child(n) div.inner h2 {
 section#timeline article:nth-child(n) div.inner h2:after {
   background: #1195a1;
 }
-}
+
 section#timeline article:nth-child(n) div.inner h2 {
   background: #1195a1;
 }
