@@ -1,19 +1,18 @@
-html, body {
+body {
   margin: 0;
   padding: 0;
   font-family: sailec, sans-serif;
 }
 
 .content {
-  background-color: white;
-  padding: 10px 30px 10px 5px;
-  border-radius: 0 0 6px 6px;
-  display:none;
+  background: white;
+  padding: 1em; /* This fixed so many of the things. */
+/*   border-radius: 0 0 6px 6px; */
 }
 
-.indent {
+/* .indent {
 text-indent: 10px;
-}
+}  Where was this from? It's used nowhere in the html*/
 
 li { 
 font-size:15px;
@@ -24,58 +23,40 @@ font-size:15px;
 body {
   background: #faf7ee;
 }
-section#timeline {
-  width: 70%;
-/*   margin: left; */
+#timeline {
   position: relative;
 }
-section#timeline:before {
+#timeline:before {
   content: '';
   display: block;
   position: absolute;
-  left: 50%;
+  left: 10%;
   top: 1%;
   margin: 0 0 0 0px;
   width: 3px;
   height: 100%;
   background: #04b499;
 }
-section#timeline article {
-  width: 100%;
-  margin: 45px 0px 20px 0;
+article {
+  margin: 20px 0;
+  left: -40%;
   position: relative;
 }
-section#timeline article:after {
+article:after {
   content: '';
   display: block;
-  clear: both;
+  clear: both; /* what is the purpose of this?*/
 }
-section#timeline article div.inner {
+.inner {
+  /* this gets the award for my most hated css attribute, modifying anything here breaks everything. You have been warned. */
   width: 50%;
-  float: right;
-  margin: 0px -80px 0 0;
+/*   float: right; */
+  margin: 0px -10% 0 0;
   padding: -5px 0 0 0;
   border-radius: 6px;
 }
-section#timeline article div.inner span.date {
-  display: block;
-  width: 60px;
-  height: 50px;
-  padding: 5px 0;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin: -20px 0 0 -50px;
-  border-radius:100% ;
-  font-weight: 400;
-  line-height: 0px;
-  text-transform: ;
-  background: #eb7925;
-  color: white;
-  border: 20px solid #eb7925;
-}
 
-section#timeline article div.inner span.dot {
+.dot {
   display: block;
   width: 25px;
   height: 25px;
@@ -88,44 +69,52 @@ section#timeline article div.inner span.dot {
   background: #1195a1;
 }
 
-section#timeline article div.inner span.highschool {
+.highschool {
   display: block;
-  width: 600px;
-  height: 50px;
+  width: 100%;
   position: relative;
-  right: 35%;
-  margin: 0px 0 10px -100px;
+  right: 30%;
   padding: 10px;
-  border-radius:0%;
   background: #faf7ee;
 }
-
-section#timeline article div.inner span.date span {
-  display: block;
-  text-align: center;
-  padding: 25px 0 0 0px;
-}
-
-section#timeline article div.inner span.hsyear {
-  font-size: 2.5em;
+.hsyear {
+  font-size: 1.5em;
   font-weight:600;
   color: #1195a1;
 }
 
-section#timeline article div.inner span.date span.month {
-  font-size: 18px;
-  font-weight:600;
-  margin: -6px 0 0 -6px;
+.date {
+  display: block;
+  width: 80px;
+  height: 80px;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 51%;
+  margin: -20px 0 0 -50px;
+  border-radius:100%;
+  font-weight: bold;
+  line-height: 1em; /* THIS WAS SET TO 0 AND WAS INHERTITED BY THE CHILDREN VALUES ;_;!!! */
+  background: #eb7925;
+  color: white;
+/*   border: 20px solid #eb7925; nooooooooooooo */
 }
 
-section#timeline article div.inner span.date span.year {
-  font-size: 18px;
+.date-value {
+  display:block;
+  position: relative;
+  top:30%;
+  font-size:18px;
+  margin: auto;
+  text-align: center;
+  padding: 0% 0% 0 0;
 }
-section#timeline article div.inner h2 {
+
+.content-title {
   padding: 16px 20px 10px 15px;
   margin: 0;
   color: white;
-  font-size: 20px;
+  font-size: 1em;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -134,6 +123,7 @@ section#timeline article div.inner h2 {
   position: relative;
 }
 section#timeline article div.inner h2:after {
+  /* WHAT IS THIS?! */
   content: '';
   position: absolute;
   top: 20px;
@@ -194,3 +184,11 @@ section#timeline article:nth-child(n) div.inner h2:after {
   background: #1195a1;
 }
 
+@media (min-width: 576px) {
+  .hsyear{
+    font-size: 2.5em;
+  }
+  .content-title{
+    font-size: 1.2em;
+  }
+}
