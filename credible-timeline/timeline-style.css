@@ -2,38 +2,42 @@ body {
   margin: 0;
   padding: 0;
   font-family: sailec, sans-serif;
-  overflow-x:hidden; /* hides the extra whitespace problem*/
+  overflow-x: hidden;
+  /* hides the extra whitespace problem*/
 }
 
-a { 
-color:red;
-decoration: underline;
+a {
+  color: red;
+  decoration: underline;
 }
 
 .content {
-  display:none;
+  display: none;
   background: white;
-  padding: 1em; /* This fixed so many of the things. (ul has 1em margins by default, it created unwanted white space) */
-/*   border-radius: 0 0 6px 6px; */
+  padding: 1em;
+  /* This fixed so many of the things. (ul has 1em margins by default, it created unwanted white space) */
+  /*   border-radius: 0 0 6px 6px; */
 }
 
 /* .indent {
 text-indent: 10px;
 }  Where was this from? It's used nowhere in the html*/
 
-li { 
-font-size:15px;
+li {
+  font-size: 15px;
   line-height: 22px;
-  padding-bottom:15px;
+  padding-bottom: 15px;
 }
 
 body {
   background: #faf7ee;
 }
+
 #timeline {
   position: relative;
-  width:100%;
+  width: 100%;
 }
+
 #timeline:before {
   content: '';
   display: block;
@@ -45,20 +49,24 @@ body {
   height: 100%;
   background: #04b499;
 }
+
 article {
   margin: 20px 0;
   left: -40%;
   position: relative;
 }
+
 article:after {
   content: '';
   display: block;
-  clear: both; /* what is the purpose of this?*/
+  clear: both;
+  /* what is the purpose of this?*/
 }
+
 .inner {
   /* this gets the award for my most hated css attribute, modifying anything here breaks everything. You have been warned. */
   width: 70%;
-/*   float: right; */
+  /*   float: right; */
   margin: 0px -35% 0 0;
   padding: -5px 0 0 0;
   border-radius: 6px;
@@ -69,10 +77,10 @@ article:after {
   width: 25px;
   height: 25px;
   position: absolute;
-  top:10px;
+  top: 10px;
   left: 50%;
   margin: 0 0 0 -11px;
-  border-radius:100% ;
+  border-radius: 100%;
   background: #1195a1;
 }
 
@@ -84,9 +92,10 @@ article:after {
   padding: 10px;
   background: #faf7ee;
 }
+
 .hsyear {
   font-size: 1.5em;
-  font-weight:600;
+  font-weight: 600;
   color: #1195a1;
 }
 
@@ -99,19 +108,20 @@ article:after {
   top: 0;
   left: 51%;
   margin: -20px 0 0 -50px;
-  border-radius:100%;
+  border-radius: 100%;
   font-weight: bold;
-  line-height: 1em; /* THIS WAS SET TO 0 AND WAS INHERTITED BY THE CHILDREN VALUES ;_;!!! */
+  line-height: 1em;
+  /* THIS WAS SET TO 0 AND WAS INHERTITED BY THE CHILDREN VALUES ;_;!!! */
   background: #eb7925;
   color: white;
-/*   border: 20px solid #eb7925; nooooooooooooo */
+  /*   border: 20px solid #eb7925; nooooooooooooo */
 }
 
 .date-value {
-  display:block;
+  display: block;
   position: relative;
-  top:30%;
-  font-size:18px;
+  top: 30%;
+  font-size: 18px;
   margin: auto;
   text-align: center;
   padding: 0% 0% 0 0;
@@ -125,62 +135,76 @@ article:after {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-align:left;
+  text-align: left;
   border-radius: 6px 6px 0 0;
   position: relative;
   cursor: pointer;
 }
+
 section#timeline article div.inner h2:after {
   /* WHAT IS THIS?! */
   content: '';
   position: absolute;
   top: 20px;
   right: 398px;
-  	width: 10px; 
-	  height: 10px;
+  width: 10px;
+  height: 10px;
   -webkit-transform: rotate(-45deg);
 }
+
 section#timeline article div.inner p {
   padding: 15px;
   margin: 0;
   font-size: 14px;
-  background:white;
+  background: white;
   color: #202022;
   border-radius: 0 0 6px 6px;
 }
+
 section#timeline article:nth-child(n) div.inner {
   float: right;
 }
+
 section#timeline article:nth-child(n) div.inner h2:after {
   left: -5px;
 }
+
 section#timeline article:nth-child(n) div.inner h2 {
   background: black;
 }
+
 section#timeline article:nth-child(n) div.inner h2:after {
   background: black;
 }
+
 section#timeline article:nth-child(n) div.inner h2 {
   background: orange;
 }
+
 section#timeline article:nth-child(n) div.inner h2:after {
   background: orange;
 }
+
 section#timeline article:nth-child(3) div.inner h2 {
   background: grey;
 }
+
 section#timeline article:nth-child(3) div.inner h2:after {
   background: grey;
 }
+
 section#timeline article:nth-child(n) div.inner h2 {
   background: brown;
 }
+
 section#timeline article:nth-child(n) div.inner h2:after {
   background: brown;
 }
+
 section#timeline article:nth-child(n) div.inner h2 {
   background: #1195a1;
 }
+
 section#timeline article:nth-child(n) div.inner h2:after {
   background: #1195a1;
 }
@@ -188,15 +212,16 @@ section#timeline article:nth-child(n) div.inner h2:after {
 section#timeline article:nth-child(n) div.inner h2 {
   background: #1195a1;
 }
+
 section#timeline article:nth-child(n) div.inner h2:after {
   background: #1195a1;
 }
 
 @media (min-width: 576px) {
-  .hsyear{
+  .hsyear {
     font-size: 2.5em;
   }
-  .content-title{
+  .content-title {
     font-size: 1.2em;
   }
 }
