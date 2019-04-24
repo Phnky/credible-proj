@@ -9,7 +9,7 @@ body {
 
 a {
   color: red;
-  decoration: underline;
+  decoration: underline; /* decoration is not a property, why is this here? */
 }
 
 li {
@@ -28,7 +28,6 @@ article:after {
   content: '';
   display: block;
   clear: both;
-  /* what is the purpose of this?*/
 }
 
 .float-right{
@@ -65,14 +64,12 @@ text-indent: 10px;
   background: #04b499;
 }
 
-
-
 .inner {
   /* this gets the award for my most hated css attribute, modifying anything here breaks everything. You have been warned. */
   width: 70%;
   /*   float: right; */
   margin: 0px -35% 0 0;
-  padding: -5px 0 0 0;
+  padding: -5px 0 0 0; /* using padding with width can make things larger than you expect */
   border-radius: 6px;
 }
 
@@ -93,8 +90,9 @@ text-indent: 10px;
   width: 100%;
   position: relative;
   right: 30%;
-  padding: 10px;
+  padding: 10px; /* using padding with width can make things larger than you expect */
   background: #faf7ee;
+  text-align: left;
 }
 
 .hsyear {
