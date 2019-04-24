@@ -1,4 +1,5 @@
 body {
+  background: #faf7ee;
   margin: 0;
   padding: 0;
   font-family: sailec, sans-serif;
@@ -9,6 +10,25 @@ body {
 a {
   color: red;
   decoration: underline;
+}
+
+li {
+  font-size: 15px;
+  line-height: 22px;
+  padding-bottom: 15px;
+}
+
+article {
+  margin: 20px 0;
+  left: -40%;
+  position: relative;
+}
+
+article:after {
+  content: '';
+  display: block;
+  clear: both;
+  /* what is the purpose of this?*/
 }
 
 .content {
@@ -23,15 +43,6 @@ a {
 text-indent: 10px;
 }  Where was this from? It's used nowhere in the html*/
 
-li {
-  font-size: 15px;
-  line-height: 22px;
-  padding-bottom: 15px;
-}
-
-body {
-  background: #faf7ee;
-}
 
 #timeline {
   position: relative;
@@ -50,18 +61,7 @@ body {
   background: #04b499;
 }
 
-article {
-  margin: 20px 0;
-  left: -40%;
-  position: relative;
-}
 
-article:after {
-  content: '';
-  display: block;
-  clear: both;
-  /* what is the purpose of this?*/
-}
 
 .inner {
   /* this gets the award for my most hated css attribute, modifying anything here breaks everything. You have been warned. */
