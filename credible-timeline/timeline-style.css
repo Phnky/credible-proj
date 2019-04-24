@@ -31,6 +31,10 @@ article:after {
   /* what is the purpose of this?*/
 }
 
+.float-right{
+  float:right;
+}
+
 .content {
   display: none;
   background: white;
