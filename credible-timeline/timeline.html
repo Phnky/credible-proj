@@ -1,21 +1,246 @@
+<!DOCTYPE html>
+<html>
 <head>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sailec, sans-serif;
+  overflow-x:hidden; /* hides the extra whitespace problem*/
+}
+
+
+.timelinelink { 
+  color: #EB7925;
+}
+
+ul {
+list-style: disc inside none;
+text-align: left;
+}
+
+ul li ul {
+list-style: circle inside none;
+padding-left: 2em;
+}
+
+/* .indent {
+text-indent: ;
+}  Where was this from? It's used nowhere in the html*/
+
+.content {
+  display:none;
+  background: white;
+  padding: 1em; /* This fixed so many of the things. (ul has 1em margins by default, it created unwanted white space) */
+/*   border-radius: 0 0 6px 6px; */
+}
+
+
+
+li { 
+font-size:15px;
+  line-height: 22px;
+  padding-bottom:15px;
+}
+
+body {
+  background: #F9F6EE;
+}
+
+#timeline {
+  position: relative;
+  width:100%;
+}
+#timeline:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 10%;
+  top: 1%;
+  margin: 0 0 0 0px;
+  width: 3px;
+  height: 100%;
+  background: #04b499;
+}
+article {
+  margin: 20px 0;
+  left: -40%;
+  position: relative;
+}
+article:after {
+  content: '';
+  display: block;
+  clear: both; /* what is the purpose of this?*/
+}
+.inner {
+  /* this gets the award for my most hated css attribute, modifying anything here breaks everything. You have been warned. */
+  width: 70%;
+/*   float: right; */
+  margin: 0px -35% 0 0;
+  padding: -5px 0 0 0;
+  border-radius: 6px;
+}
+
+.dot {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top:10px;
+  left: 50%;
+  margin: 0 0 0 -11px;
+  border-radius:100% ;
+  background: #1195a1;
+}
+
+.highschool {
+  display: block;
+  width: 100%;
+  position: relative;
+  right: 30%;
+  padding: 10px;
+  background: #F9F6EE;
+  text-align: left;
+}
+.hsyear {
+  font-size: 1.5em;
+  font-weight:600;
+  color: #1195a1;
+}
+
+.date {
+  display: block;
+  width: 80px;
+  height: 80px;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 51%;
+  margin: -20px 0 0 -50px;
+  border-radius:100%;
+  font-weight: bold;
+  line-height: 1em; /* THIS WAS SET TO 0 AND WAS INHERTITED BY THE CHILDREN VALUES ;_;!!! */
+  background: #eb7925;
+  color: white;
+/*   border: 20px solid #eb7925; nooooooooooooo */
+}
+
+.date-value {
+  display:block;
+  position: relative;
+  top:30%;
+  font-size:15px;
+  line-height:1.2em;
+  margin: auto;
+  text-align: center;
+  padding: 0% 0% 0 0;
+}
+
+.content-title {
+  padding: 16px 20px 10px 15px;
+  margin: 0;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align:left;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+
+section#timeline article div.inner h2:after {
+  /* WHAT IS THIS?! */
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 398px;
+  	width: 10px; 
+	  height: 10px;
+  -webkit-transform: rotate(-45deg);
+}
+section#timeline article div.inner p {
+  padding: 15px;
+  margin: 0;
+  font-size: 14px;
+  background:white;
+  color: #202022;
+  border-radius: 0 0 6px 6px;
+}
+section#timeline article:nth-child(n) div.inner {
+  float: right;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  left: -5px;
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: black;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: black;
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: orange;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: orange;
+}
+section#timeline article:nth-child(3) div.inner h2 {
+  background: grey;
+}
+section#timeline article:nth-child(3) div.inner h2:after {
+  background: grey;
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: brown;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: brown;
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: #1195a1;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: #1195a1;
+}
+}
+section#timeline article:nth-child(n) div.inner h2 {
+  background: #1195a1;
+}
+section#timeline article:nth-child(n) div.inner h2:after {
+  background: #1195a1;
+}
+
+@media (min-width: 576px) {
+  .hsyear{
+    font-size: 2.5em;
+  }
+  .content-title{
+    font-size: 1.2em;
+  }
+}
+
+</style>
 </head>
 
 <!---
 TODO:
-- section height isn't dynamically changing on instapage
+-section height isn't dynamically changing on instapage
 BUGS:
 -exanding content for some reason changes the width of other content on the page?!?!?
 -something is giving the timeline super width. workaround in body css.
 x hsyear is being shifted on instapage //.highschool was text-aligned to center
 --->
+<body>
 <section id="timeline">
   <article>
     <div class="inner">
       <span class="highschool">
-        <span class="hsyear">Start Saving Early</span>
+        <span class="hsyear" id="firststep">Start Saving Early</span>
       </span>
       <span class="spacer"></span>
     </div>
@@ -24,7 +249,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     <div class="inner">
       <span class="dot"> 
       </span>
-        <h2 class="content-title">Build your savings <i class="fa fa-fw fa-chevron-right float-right"></i>
+        <h2 class="content-title">Build your savings <i class="fa fa-fw fa-chevron-down float-right"></i>
         </h2>
       <div class="content">
         <ul>
@@ -58,7 +283,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
   <article>
     <div class="inner">
       <span class="highschool">
-        <span class="hsyear">Sophomore & Junior Year of High School</span>
+        <span class="hsyear" id="sophomorehs">Sophomore & Junior Year of High School</span>
       </span>
       <span class="spacer"></span>
     </div>
@@ -67,7 +292,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     <div class="inner">
       <span class="dot"> 
       </span>
-      <h2 class="content-title">Research colleges <i class="fa fa-fw fa-chevron-right float-right"></i>
+      <h2 class="content-title">Research colleges <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -99,7 +324,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     <div class="inner">
       <span class="dot"> 
       </span>
-      <h2 class="content-title">Start researching grants and scholarships <i class="fa fa-fw fa-chevron-right float-right"></i>
+      <h2 class="content-title">Start researching grants and scholarships <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -117,7 +342,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
   <article>
     <div class="inner">
       <span class="highschool">
-        <span class="hsyear">Senior Year of High School</span>
+        <span class="hsyear" id="seniorhs">Senior Year of High School</span>
       </span>
       <span class="spacer"></span>
     </div>
@@ -130,7 +355,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
           <div class="year">1st</div>
         </div>
       </span>
-      <h2 class="content-title">Apply for aid by filling out the FAFSA <i class="fa fa-fw fa-chevron-right float-right"></i>
+      <h2 class="content-title">Apply for aid by filling out the FAFSA <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -170,7 +395,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
           <div class="month">February</div>
         </div>
       </span>
-      <h2 class="content-title">Apply for state-based aid <i class="fa fa-fw fa-chevron-right float-right"></i>
+      <h2 class="content-title">Apply for state-based aid <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -192,7 +417,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     <div class="inner">
       <span class="dot"> 
       </span>
-      <h2 class="content-title">Start applying for scholarships <i class="fa fa-fw fa-chevron-right float-right"></i>
+      <h2 class="content-title">Start applying for scholarships <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -217,7 +442,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     <div class="inner">
       <span class="dot"> 
       </span>
-      <h2 class="content-title">Apply to colleges <i class="fa fa-fw fa-chevron-right float-right"></i>
+      <h2 class="content-title">Apply to colleges <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -245,7 +470,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     <div class="inner">
       <span class="dot"> 
       </span>
-      <h2 class="content-title">Review your financial aid award letters <i class="fa fa-fw fa-chevron-right float-right"></i>
+      <h2 class="content-title">Review your financial aid award letters <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -276,7 +501,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
         </div>
       </span>
       <h2 class="content-title">Final decision deadline and tuition deposits due
-        <i class="fa fa-fw fa-chevron-right float-right"></i>
+       <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -301,7 +526,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
   <article>
     <div class="inner">
       <span class="highschool">
-        <span class="hsyear">Summer Before Starting College</span>
+        <span class="hsyear" id="summer">Summer Before Starting College</span>
       </span>
       <span class="spacer"></span>
     </div>
@@ -310,7 +535,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     <div class="inner">
       <span class="dot"> 
       </span>
-      <h2 class="content-title">Register for classes <i class="fa fa-fw fa-chevron-right float-right"></i>
+      <h2 class="content-title">Register for classes <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -329,5 +554,277 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       </div>
     </div>
   </article>
-
+    
+  <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Pay for classes <i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>When will the bill arrive?</b>
+            <ul>
+              <li>You can expect to get your first tuition bill for fall classes in July or August, with payment due in the fall.</li>  
+            </ul>
+          </li>
+          <li><b>What are the different payment options?</b>
+            <ul>
+              <li>You’ll usually have the option to pay by check or electronic funds transfer from a bank account or 529 plan. If you can’t pay all at once, most schools offer <a href="http://www.finaid.org/otheraid/tuition.phtml">tuition installment plans</a> that let you make monthly payments over the rest of the academic year.</li>
+  </ul>
+          <li><b>What if you can’t pay your bill?</b></li>
+           <ul>
+              <li>Expect to pay interest charges on any past due balances on your tuition bill, which must be paid in full before you can register for future classes or obtain transcripts of your grades.</li>
+             <li>Most families take out student loans to pay for college. If you’re not seeing credits for federal student loans that you’re counting on to pay your bill, make sure you’ve completed the <a href="https://studentaid.ed.gov/sa/fafsa/next-steps/entrance-counseling">required entrance counseling</a> and signed a promissory note. </li>
+</ul>
+        <li><b>How to take out student loans</b></li>
+           <ul>
+              <li>The first step to taking out federal loans is to fill out the <a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/">Free Application for Federal Student Aid</a> (FAFSA). You can fill out the FAFSA for the 2019-20 academic year until June 30, 2020.</li>
+             <li>If you’ve hit your <a href="https://www.credible.com/blog/student-loans/student-loan-limits/">federal student loan limits</a>, consider using federal PLUS or private student loans to cover unmet funding needs. These loans <a href="https://www.credible.com/blog/student-loans/student-loans-living-expenses/">can be used for living expenses</a>.</li>
+             <li>You should always <a href="https://www.credible.com/student-loans">compare rates from multiple lenders</a> before taking out a private loan to get the best terms for your situation.    </li>
+</ul>   
+  </li>     
+      </div>
+    </div>
+  </article>
+        
+        <article>
+    <div class="inner">
+      <span class="highschool">
+        <span class="hsyear" id="freshmanco">Freshman Year of College</span>
+      </span>
+      <span class="spacer"></span>
+    </div>
+  </article>
+  <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>Job opportunities</b>
+            <ul>
+              <li>To help cover college costs, you have many choices like work-study programs, on-campus jobs, paid internships, and other off-campus options. Here are some of your <a href="https://www.credible.com/blog/student-loans/best-jobs-for-college/">best options for jobs while in school</a>.</li>
+            </ul>
+          </li>
+      </div>
+    </div>
+  </article>
+    
+    <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Submit the FAFSA for next year <i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>Why you need to continue to submit the FAFSA</b>
+            <ul>
+              <li>If you’re relying on federal student loans, grants, or work-study programs, you have to submit the FAFSA every year you’re in college. This is because your financial situation changes from year to year.</li>
+            </ul>
+             <li><b>How to take the work out of reapplying</b>
+            <ul>
+              <li>Fortunately, if you filled out the FAFSA the year before, you might be eligible to complete a Renewal FAFSA, an online form that pre-fills much of the information you provided the year before.</li>
+              </li>To reapply, log in as a returning user to <a href="https://studentaid.ed.gov/sa/fafsa">FAFSA on the Web</a> and click FAFSA Renewal.</li>           
+          </li>
+      </div>
+    </div>
+  </article>
+     
+ <article>
+    <div class="inner">
+      <span class="highschool">
+        <span class="hsyear" id="sophomoreco">Sophomore & Junior Year of College</span>
+      </span>
+      <span class="spacer"></span>
+    </div>
+  </article>
+  <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Register for classes<i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>Plan ahead to graduate on time</b>
+            <ul>
+              <li>Register for classes as soon as possible before the classes you need fill up. Before registering for classes, check in with your adviser to make sure you’re on track to fulfill the requirements for your major, in the right sequence.</li>
+            </ul>
+          </li>
+      </div>
+    </div>
+  </article>
+    
+    <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Pay for classes <i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>What if you can’t pay your bill?</b>
+            <ul>
+              <li>If you’ve hit your <a href="https://www.credible.com/blog/student-loans/student-loan-limits/">federal student loan limits</a>, consider using <a href="https://www.credible.com/blog/student-loans/use-private-student-loans-fill-college-funding-gaps/">federal PLUS or private student loans</a> to cover unmet funding needs. These loans <a href="https://www.credible.com/blog/student-loans/student-loans-living-expenses/">can be used for living expenses</a>.</li>
+              <li>You should always <a href="https://www.credible.com/student-loans">compare rates from multiple lenders</a> before taking out a private loan to get the best terms for your situation.    </li>
+            </ul>       
+          </li>
+      </div>
+    </div>
+  </article>
+    
+    <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>Job opportunities</b>
+            <ul>
+              <li>To help cover college costs, you have many choices like work-study programs, on-campus jobs, paid internships, and other off-campus options. Here are some of your <a href="https://www.credible.com/blog/student-loans/best-jobs-for-college/">best options for jobs while in school</a>.</li>
+            </ul>
+          </li>
+      </div>
+    </div>
+  </article>
+      
+      <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Submit the FAFSA for next year <i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>Why you need to continue to submit the FAFSA</b>
+            <ul>
+              <li>If you’re relying on federal student loans, grants, or work-study programs, you have to <a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/">submit the FAFSA</a> every year you’re in college. This is because your financial situation changes from year to year.</li>
+            </ul>
+          <li><b>How to take the work out of reapplying</b>
+            <ul>
+              <li>Fortunately, if you filled out the FAFSA the year before, you might be eligible to complete a Renewal FAFSA, an online form that pre-fills much of the information you provided the year before.</li>
+              <li>To reapply, log in as a returning user to <a href="https://studentaid.ed.gov/sa/fafsa">FAFSA on the Web</a> and click FAFSA Renewal.</li>
+            </ul>
+</li>
+      </div>
+    </div>
+  </article>  
+        
+         <article>
+    <div class="inner">
+      <span class="highschool">
+        <span class="hsyear" id="seniorco">Senior Year of College</span>
+      </span>
+      <span class="spacer"></span>
+    </div>
+  </article>
+  <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Register for classes<i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>Plan ahead to graduate on time</b>
+            <ul>
+              <li>Register for classes as soon as possible before the classes you need fill up. Before registering for classes, check in with your adviser to make sure you’re on track to fulfill the requirements for major, in the right sequence.</li>
+            </ul>
+          </li>
+      </div>
+    </div>
+  </article>
+    
+    <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Pay for classes <i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>What if you can’t pay your bill?</b>
+            <ul>
+              <li>If you’ve hit your <a href="https://www.credible.com/blog/student-loans/student-loan-limits/">federal student loan limits</a>, consider using <a href="https://www.credible.com/blog/student-loans/use-private-student-loans-fill-college-funding-gaps/">federal PLUS or private student loans</a> to cover unmet funding needs. These loans <a href="https://www.credible.com/blog/student-loans/student-loans-living-expenses/">can be used for living expenses</a>.</li>
+              <li>You should always <a href="https://www.credible.com/student-loans">compare rates from multiple lenders</a> before taking out a private loan to get the best terms for your situation.    </li>
+            </ul>       
+          </li>
+      </div>
+    </div>
+  </article>
+    
+    <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>Job opportunities</b>
+            <ul>
+              <li>To help cover college costs, you have many choices like work-study programs, on-campus jobs, paid internships, and other off-campus options. Here are some of your <a href="https://www.credible.com/blog/student-loans/best-jobs-for-college/">best options for jobs while in school</a>.</li>
+            </ul>
+          </li>
+      </div>
+    </div>
+  </article>
+      
+      <article>
+    <div class="inner">
+      <span class="dot"> 
+      </span>
+      <h2 class="content-title">Research loan repayment plans  <i class="fa fa-fw fa-chevron-down float-right"></i>
+      </h2>
+      <div class="content">
+        <ul>
+          <li><b>When do you have to start repaying your loans?</b>
+            <ul>
+              <li>Most federal student loans and private loans provide a 6-month “grace period” after you leave school before you have to start making monthly payments.</li>
+              <li>If you have <a href="https://www.credible.com/blog/student-loans/subsidized-vs-unsubsidized-student-loans-which-is-for-you/">federal direct subsidized loans</a>, interest doesn’t start racking up until after your grace period has ended.</li>
+              <li>With any other type of loan, interest starts accruing as soon as you take your loans out. So starting repayment as soon as you can will help you <a href="https://www.credible.com/blog/refinance-student-loans/pay-off-student-loans/">pay off your student loans faster</a>.</li>
+              <li>You can use our <a href="https://www.credible.com/blog/calculators/student-loan-repayment-calculator/">student loan repayment calculator</a> to figure out how long it will take you to pay off your total student loan balance.
+</li>
+            </ul>
+          <li><b>What are the different repayment options?</b>
+            <ul>
+              <li>There are many options for repaying federal student loans, ranging from the standard 10-year repayment plan to extended or income-driven repayment plans.</li>
+              <li>If you have private student loans, you picked a repayment plan when you took out your loan. If you decided to defer or make partial payments while in school, your monthly payment might increase.</li>
+              <li>Many borrowers <a href="https://www.credible.com/refinance-student-loans/">choose to refinance their student loans</a> at lower rates after graduation.</li>
+            </ul>
+          <li><b>What if you can’t afford your monthly payments?</b></li><ul>
+          <li>If you’re having trouble making the monthly payments on federal student loans, income-driven repayment plans can make your payments more manageable by stretching them out over a longer period of time. <a href="https://www.credible.com/blog/refinance-student-loans/income-based-repayment/">Income-driven repayment plans</a> might provide loan forgiveness if you haven’t paid off your loan after 10, 20, or 25 years.</li>
+          <li>You might be able to <a href="https://www.credible.com/blog/refinance-student-loans/3-ways-lower-monthly-student-loan-payment/">lower your monthly payments</a> on your student loans by extending your repayment term. Just remember that any repayment plan that stretches out your monthly payments over a longer period of time without an interest rate reduction might increase your total repayment costs.</li>
+          </ul>
+            </li>
+      </div>
+    </div>
+  </article>    
+    
 </section>
+
+
+
+<script>
+
+$("article").click(function(e) {
+  $(this)
+    .children()
+    .children(".content")
+    .slideToggle();
+  $(this)
+    .children()
+    .children("h2")
+    .children("i")
+    .toggleClass("fa-chevron-down")
+    .toggleClass("fa-chevron-right");
+});
+</script>
+</body>
+</html>
