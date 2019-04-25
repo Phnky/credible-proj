@@ -4,52 +4,41 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-
 body {
   margin: 0;
   padding: 0;
-  font-family: sailec, sans-serif;
+  font-family: sailec-regular, sans-serif;
   overflow-x:hidden; /* hides the extra whitespace problem*/
 }
-
-
 .timelinelink { 
   color: #EB7925;
 }
-
 ul {
 list-style: disc inside none;
 text-align: left;
 }
-
 ul li ul {
 list-style: circle inside none;
 padding-left: 2em;
 }
-
 /* .indent {
 text-indent: ;
 }  Where was this from? It's used nowhere in the html*/
-
 .content {
+  font-family:sailec-regular;
   display:none;
   background: white;
   padding: 1em; /* This fixed so many of the things. (ul has 1em margins by default, it created unwanted white space) */
 /*   border-radius: 0 0 6px 6px; */
 }
-
-
-
 li { 
 font-size:15px;
   line-height: 22px;
   padding-bottom:15px;
 }
-
 body {
   background: #F9F6EE;
 }
-
 #timeline {
   position: relative;
   width:100%;
@@ -75,6 +64,11 @@ article:after {
   display: block;
   clear: both; /* what is the purpose of this?*/
 }
+
+.float-right{
+  float:right;
+}
+
 .inner {
   /* this gets the award for my most hated css attribute, modifying anything here breaks everything. You have been warned. */
   width: 70%;
@@ -83,7 +77,6 @@ article:after {
   padding: -5px 0 0 0;
   border-radius: 6px;
 }
-
 .dot {
   display: block;
   width: 25px;
@@ -95,7 +88,6 @@ article:after {
   border-radius:100% ;
   background: #1195a1;
 }
-
 .highschool {
   display: block;
   width: 100%;
@@ -106,11 +98,11 @@ article:after {
   text-align: left;
 }
 .hsyear {
+  font-family: sailec-bold;
   font-size: 1.5em;
   font-weight:600;
   color: #1195a1;
 }
-
 .date {
   display: block;
   width: 80px;
@@ -121,28 +113,29 @@ article:after {
   left: 51%;
   margin: -20px 0 0 -50px;
   border-radius:100%;
+  font-family: sailec-medium;
   font-weight: bold;
   line-height: 1em; /* THIS WAS SET TO 0 AND WAS INHERTITED BY THE CHILDREN VALUES ;_;!!! */
   background: #eb7925;
   color: white;
 /*   border: 20px solid #eb7925; nooooooooooooo */
 }
-
 .date-value {
   display:block;
   position: relative;
   top:30%;
+  font-family: sailec-medium;
   font-size:15px;
   line-height:1.2em;
   margin: auto;
   text-align: center;
   padding: 0% 0% 0 0;
 }
-
 .content-title {
   padding: 16px 20px 10px 15px;
   margin: 0;
   color: white;
+  font-family: sailec-medium;
   font-size: 1em;
   font-weight: 500;
   text-transform: uppercase;
@@ -152,7 +145,6 @@ article:after {
   position: relative;
   cursor: pointer;
 }
-
 section#timeline article div.inner h2:after {
   /* WHAT IS THIS?! */
   content: '';
@@ -166,6 +158,7 @@ section#timeline article div.inner h2:after {
 section#timeline article div.inner p {
   padding: 15px;
   margin: 0;
+  font-family:sailec-regular;
   font-size: 14px;
   background:white;
   color: #202022;
@@ -214,16 +207,15 @@ section#timeline article:nth-child(n) div.inner h2 {
 section#timeline article:nth-child(n) div.inner h2:after {
   background: #1195a1;
 }
-
 @media (min-width: 576px) {
   .hsyear{
     font-size: 2.5em;
   }
   .content-title{
+    font-family: sailec-medium;
     font-size: 1.2em;
   }
 }
-
 </style>
 </head>
 
@@ -812,7 +804,6 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
 
 
 <script>
-
 $("article").click(function(e) {
   $(this)
     .children()
