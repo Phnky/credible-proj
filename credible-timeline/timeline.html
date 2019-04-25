@@ -807,6 +807,13 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
 
 
 <script>
+var tlheight = $('#timeline').outerHeight(true);
+
+function refreshtlheight(){
+  tlheight = $('#timeline').outerHeight(true);
+  $('#page-block-rof4bc7znfc').height(tlheight);
+}
+
 $("article").click(function(e) {
   $(this)
     .children()
@@ -818,9 +825,12 @@ $("article").click(function(e) {
     .children("i")
     .toggleClass("fa-chevron-down")
     .toggleClass("fa-chevron-right");
-  let tlheight = $('#timeline').height();
+    setTimeout(refreshtlheight, 4000);
   console.log(tlheight);
-  $(this).parent('#timeline').parent('.contents').parent('#element-2014').parent('.block-inner').parent('.border-holder').parent('.page-block').css('height', tlheight+'px');
+});
 
+$(document).ready(function(){
+  refreshtlheight();
+  $('#page-block-rof4bc7znfc').height(tlheight);
 });
 </script>
