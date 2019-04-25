@@ -40,6 +40,7 @@ body {
 #timeline {
   position: relative;
   width:100%;
+  margin-bottom:301px;
 }
 #timeline:before {
   content: '';
@@ -230,8 +231,6 @@ BUGS:
 -something is giving the timeline super width. workaround in body css.
 x hsyear is being shifted on instapage //.highschool was text-aligned to center
 --->
-<body>
-  <div id="timeline-wrapper">
 <section id="timeline">
   <article>
     <div class="inner">
@@ -804,8 +803,6 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
   </article>    
     
 </section>
-</div>
-
 
 
 <script>
@@ -820,6 +817,9 @@ $("article").click(function(e) {
     .children("i")
     .toggleClass("fa-chevron-down")
     .toggleClass("fa-chevron-right");
+  let tlheight = $('#timeline').height();
+  console.log(tlheight);
+  $(this).parent('#timeline').parent('.contents').parent('#element-2014').parent('.block-inner').parent('.border-holder').parent('.page-block').css('height', tlheight+'px');
+
 });
 </script>
-</body>
