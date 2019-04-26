@@ -8,9 +8,15 @@ body {
   font-family: sailec-regular, sans-serif;
   overflow-x:hidden; /* hides the extra whitespace problem*/
 }
+
 .timelinelink { 
-  color: #EB7925;
+  color:#EB7925;
 }
+
+.timelinelink:hover, .timelinelink:visited{
+color: #FBA929;
+}
+
 ul {
 list-style: disc inside none;
 text-align: left;
@@ -23,13 +29,20 @@ text-indent: -22px;
 /* .indent {
 text-indent: ;
 }  Where was this from? It's used nowhere in the html*/
+
 .content {
   font-family:sailec-regular;
   display:none;
   background: white;
-  padding: 1em; /* This fixed so many of the things. (ul has 1em margins by default, it created unwanted white space) */
+  padding-bottom: -1em;
+    padding-top: 2em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  /* padding: 1em; */
+ /* This fixed so many of the things. (ul has 1em margins by default, it created unwanted white space) */
 /*   border-radius: 0 0 6px 6px; */
 }
+
 li { 
 font-size:15px;
   line-height: 22px;
@@ -52,7 +65,7 @@ body {
   margin: 0 0 0 0px;
   width: 3px;
   height: 100%;
-  background: #04b499;
+  background: #044452;
 }
 article {
   margin: 20px 0;
@@ -64,11 +77,9 @@ article:after {
   display: block;
   clear: both; /* what is the purpose of this?*/
 }
-
 .float-right{
   float:right;
 }
-
 .inner {
   /* this gets the award for my most hated css attribute, modifying anything here breaks everything. You have been warned. */
   width: 70%;
@@ -88,6 +99,17 @@ article:after {
   border-radius:100% ;
   background: #1195a1;
 }
+.dotco {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top:10px;
+  left: 50%;
+  margin: 0 0 0 -11px;
+  border-radius:100% ;
+  background: #04B499;
+}
 .highschool {
   display: block;
   width: 100%;
@@ -103,6 +125,14 @@ article:after {
   font-weight:600;
   color: #1195a1;
 }
+
+.collegeyear {
+  font-family: sailec-bold;
+  font-size: 1.5em;
+  font-weight:600;
+  color: #04B499;
+}
+
 .date {
   display: block;
   width: 80px;
@@ -145,11 +175,23 @@ article:after {
   position: relative;
   cursor: pointer;
 }
-
+.college-title {
+  padding: 16px 20px 10px 15px;
+  margin: 0;
+  color: white;
+  font-family: sailec-medium;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align:left;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  cursor: pointer;
+}
 #timeline-wrapper{
   position:relative;
 }
-
 section#timeline article div.inner h2:after {
   /* WHAT IS THIS?! */
   content: '';
@@ -216,6 +258,9 @@ section#timeline article:nth-child(n) div.inner h2:after {
   .hsyear{
     font-size: 2.5em;
   }
+.collegeyear{
+    font-size: 2.5em;
+  }
   .content-title{
     font-family: sailec-medium;
     font-size: 1.2em;
@@ -251,24 +296,24 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
         <ul>
           <li><b>529 plans</b>
             <ul>
-              <li>The most common college savings plan is a 529. There are a <a href="https://www.credible.com/blog/student-loans/pay-for-college">couple of 529 plans</a> you can use to pay for college tuition and expenses. A 529 savings plan, for example, can provide tax advantages on investments. </li>
+              <li>The most common college savings plan is a 529. There are a <a href="https://www.credible.com/blog/student-loans/pay-for-college" class="timelinelink" target="_blank">couple of 529 plans</a> you can use to pay for college tuition and expenses. A 529 savings plan, for example, can provide tax advantages on investments. </li>
             </ul>
           </li>
           <li><b>Other savings plans</b>
             <ul>
-              <li>An <a href="http://www.finra.org/investors/esa-and-custodial-accounts">Education Savings Account</a> (ESA) gives you more investment options than a 529 plan, but annual contribution limits are lower and income limits apply.</li>
-              <li><a href="http://www.finaid.org/savings/ugma.phtml">A custodial account</a> is a trust fund anyone can open as a benefit to another person (like a child). It might not provide all of the tax advantages of a 529 or ESA, but withdrawals can
+              <li>An <a href="http://www.finra.org/investors/esa-and-custodial-accounts" class="timelinelink" target="_blank">Education Savings Account</a> (ESA) gives you more investment options than a 529 plan, but annual contribution limits are lower and income limits apply.</li>
+              <li><a href="http://www.finaid.org/savings/ugma.phtml" class="timelinelink" target="_blank">A custodial account</a> is a trust fund anyone can open as a benefit to another person (like a child). It might not provide all of the tax advantages of a 529 or ESA, but withdrawals can
                 be used by the beneficiary for any purpose.
               </li>
-              <li>With U.S. Savings Bonds, all or part of the interest you earn on <a href="https://www.savingsbonds.gov/indiv/planning/plan_education.htm">Series EE and I Bonds</a> might be tax-free when used for qualified educational expenses, but income
+              <li>With U.S. Savings Bonds, all or part of the interest you earn on <a href="https://www.savingsbonds.gov/indiv/planning/plan_education.htm" class="timelinelink" target="_blank">Series EE and I Bonds</a> might be tax-free when used for qualified educational expenses, but income
                 limits apply.
               </li>
             </ul>
           </li>
           <li><b>How much should you save?</b>
             <ul>
-              <li>The <a href="https://www.credible.com/blog/statistics/average-cost-of-college/">total cost of your degree</a> will depend on your family’s finances, how much aid you qualify for, whether you attend a public or private school, and whether
-                you stay close to home or attend school in another state. For example, many schools offer discounted tuition to in-state residents. You can use a <a href="https://www.fidelity.com/misc/college-savings/college_savings.html">college savings calculator</a>                to stay on track.</li>
+              <li>The <a href="https://www.credible.com/blog/statistics/average-cost-of-college/" class="timelinelink" target="_blank">total cost of your degree</a> will depend on your family’s finances, how much aid you qualify for, whether you attend a public or private school, and whether
+                you stay close to home or attend school in another state. For example, many schools offer discounted tuition to in-state residents. You can use a <a href="https://www.fidelity.com/misc/college-savings/college_savings.html" class="timelinelink" target="_blank">college savings calculator</a>                to stay on track.</li>
             </ul>
           </li>
 
@@ -294,22 +339,22 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
         <ul>
           <li><b>Academic quality</b>
             <ul>
-              <li>Rankings and online tools provided by publications like <a href="https://www.petersons.com/">Peterson’s</a>, <a href="https://www.usnews.com/best-colleges">U.S. News</a>, <a href="https://www.princetonreview.com/college-rankings/best-colleges">The Princeton Review</a>,
-                and <a href="https://www.timeshighereducation.com/rankings/united-states/2019#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats">Times Higher Education</a> can be a starting point for evaluating the academic quality and breadth
+              <li>Rankings and online tools provided by publications like <a href="https://www.petersons.com/" class="timelinelink" target="_blank">Peterson’s</a>, <a href="https://www.usnews.com/best-colleges" class="timelinelink" target="_blank">U.S. News</a>, <a href="https://www.princetonreview.com/college-rankings/best-colleges" class="timelinelink" target="_blank">The Princeton Review</a>,
+                and <a href="https://www.timeshighereducation.com/rankings/united-states/2019#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats" class="timelinelink" target="_blank">Times Higher Education</a> can be a starting point for evaluating the academic quality and breadth
                 of programs offered by top universities.</li>
-              <li>There are many other powerful tools for comparing programs, costs, and student outcomes at thousands of schools. Find out <a href="https://www.credible.com/blog/student-loans/college-roi-6-tools-gauge-return-degree/">how to understand your college return on investment</a>                (ROI).</li>
+              <li>There are many other powerful tools for comparing programs, costs, and student outcomes at thousands of schools. Find out <a href="https://www.credible.com/blog/student-loans/college-roi-6-tools-gauge-return-degree/" class="timelinelink" target="_blank">how to understand your college return on investment</a>                (ROI).</li>
             </ul>
           </li>
           <li><b>Cost</b>
             <ul>
-              <li>The <a href="https://www.credible.com/blog/statistics/average-cost-of-college/">cost of a degree</a> can depend on whether you choose a public or private school, and whether you stay close to home or attend school in another state. But your
-                financial situation can also have a big impact on your <a href="https://www.credible.com/blog/student-loans/how-to-calculate-your-student-loan-expected-family-contribution-efc/">expected family contribution</a> (EFC). </li>
-              <li>A school might offer you grants and other aid options that result in a “net price” that’s considerably lower than a school’s published tuition and room and board. The U.S. Department of Education offers a tool that helps you <a href="https://collegecost.ed.gov/netpricecenter.aspx">find any school’s net price calculator</a>.</li>
+              <li>The <a href="https://www.credible.com/blog/statistics/average-cost-of-college/" class="timelinelink" target="_blank">cost of a degree</a> can depend on whether you choose a public or private school, and whether you stay close to home or attend school in another state. But your
+                financial situation can also have a big impact on your <a href="https://www.credible.com/blog/student-loans/how-to-calculate-your-student-loan-expected-family-contribution-efc/" class="timelinelink" target="_blank">expected family contribution</a> (EFC). </li>
+              <li>A school might offer you grants and other aid options that result in a “net price” that’s considerably lower than a school’s published tuition and room and board. The U.S. Department of Education offers a tool that helps you <a href="https://collegecost.ed.gov/netpricecenter.aspx" class="timelinelink" target="_blank">find any school’s net price calculator</a>.</li>
             </ul>
           </li>
           <li><b>Personal Fit</b>
             <ul>
-              <li>You’ll also want to visit schools to get a feel for campus life by visiting classrooms, living facilities, and the surrounding community. <a href="https://www.credible.com/blog/student-loans/questions-to-ask-on-college-tour/">Ask financial aid officers and current students</a>                lots of questions to see if it’s a good fit for you.</li>
+              <li>You’ll also want to visit schools to get a feel for campus life by visiting classrooms, living facilities, and the surrounding community. <a href="https://www.credible.com/blog/student-loans/questions-to-ask-on-college-tour/" class="timelinelink" target="_blank">Ask financial aid officers and current students</a>                lots of questions to see if it’s a good fit for you.</li>
             </ul>
           </li>
       </div>
@@ -326,12 +371,12 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
         <ul>
           <li><b>What are grants and scholarships?</b>
             <ul>
-              <li>Unlike student loans, scholarships and grants are “gift aid” that you don’t have to pay back. Find out more about the <a href="https://www.credible.com/blog/student-loans/pay-for-college/#three">difference between scholarships and grants</a>.</li>
+              <li>Unlike student loans, scholarships and grants are “gift aid” that you don’t have to pay back. Find out more about the <a href="https://www.credible.com/blog/student-loans/pay-for-college/#three" class="timelinelink" target="_blank">difference between scholarships and grants</a>.</li>
             </ul>
           </li>
           <li><b>How to find scholarships and grants</b>
             <ul>
-              <li>There are many great sources for federal, campus-based, state-based, and grants and scholarships. Here’s everything you need to know about <a href="https://www.credible.com/blog/student-loans/apply-for-scholarships-grants/">finding the right grants and scholarships</a> for you.</li>
+              <li>There are many great sources for federal, campus-based, state-based, and grants and scholarships. Here’s everything you need to know about <a href="https://www.credible.com/blog/student-loans/apply-for-scholarships-grants/" class="timelinelink" target="_blank">finding the right grants and scholarships</a> for you.</li>
       </div>
     </div>
   </article>
@@ -357,7 +402,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
         <ul>
           <li><b>What is the FAFSA?</b>
             <ul>
-              <li>The <a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/">Free Application for Federal Student Aid</a> (FAFSA) provides details about your family’s financial situation to the U.S. Department of Education. The information
+              <li>The <a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/" class="timelinelink" target="_blank">Free Application for Federal Student Aid</a> (FAFSA) provides details about your family’s financial situation to the U.S. Department of Education. The information
                 is then shared with the colleges you intend to apply to and state agencies where those schools are located.</li>
             </ul>
           </li>
@@ -370,12 +415,12 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
           </li>
           <li><b>Tips for filling out the FAFSA</b>
             <ul>
-              <li><a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/">Fill out the FAFSA</a> as soon as possible after the application window opens on Oct. 1. Many grants and scholarships that are available on a first-come, first-served
+              <li><a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/" class="timelinelink" target="_blank">Fill out the FAFSA</a> as soon as possible after the application window opens on Oct. 1. Many grants and scholarships that are available on a first-come, first-served
                 basis require that you fill out the FAFSA to qualify. </li>
-              <li><a href="https://studentaid.ed.gov/sa/fafsa">Apply for the FAFSA online</a> or by using the <a href="https://studentaid.ed.gov/sa/about/announcements/fafsa-mobile-options">FAFSA mobile app</a>. </li>
-              <li>Round up all the documents and information you’ll need before starting your application. This includes <a href="https://studentaid.ed.gov/sa/fafsa/filling-out#documents">your personal and financial information</a> (typically your parents’
+              <li><a href="https://studentaid.ed.gov/sa/fafsa" class="timelinelink" target="_blank">Apply for the FAFSA online</a> or by using the <a href="https://studentaid.ed.gov/sa/about/announcements/fafsa-mobile-options" class="timelinelink" target="_blank">FAFSA mobile app</a>. </li>
+              <li>Round up all the documents and information you’ll need before starting your application. This includes <a href="https://studentaid.ed.gov/sa/fafsa/filling-out#documents" class="timelinelink" target="_blank">your personal and financial information</a> (typically your parents’
                 info, too) like your Social Security number, proof of income, tax forms, and more.</li>
-              <li><a href="https://studentaid.ed.gov/sa/fafsa/filling-out#schools">List every school that you plan to apply to</a> on your FAFSA, so that those schools have the information they need to determine how much financial aid they can offer you.
+              <li><a href="https://studentaid.ed.gov/sa/fafsa/filling-out#schools" class="timelinelink" target="_blank">List every school that you plan to apply to</a> on your FAFSA, so that those schools have the information they need to determine how much financial aid they can offer you.
                 </li>
             </ul>
           </li>
@@ -388,7 +433,8 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     <div class="inner">
       <span class="date">
         <div class="date-value">
-          <div class="month">February</div>
+          <div class="month">Feb &</div>
+         <div class="year">March</div>
         </div>
       </span>
       <h2 class="content-title">Apply for state-based aid <i class="fa fa-fw fa-chevron-down float-right"></i>
@@ -402,8 +448,8 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
           </li>
           <li><b>How to apply for state-based aid</b>
             <ul>
-              <li><a href="https://studentaid.ed.gov/sa/sites/default/files/2019-20-fafsa-state-deadlines.pdf">State deadlines</a> can be as early as February or March and money for these programs can run out, so apply as soon as possible.</li>
-              <li>Filling out the FAFSA is often the first step for qualifying for these programs, but you still have to apply directly to the agency administering the financial aid program in your state. <a href="https://www.nasfaa.org/State_Financial_Aid_Programs">Use this map</a>                to find your agency.</li>
+              <li><a href="https://studentaid.ed.gov/sa/sites/default/files/2019-20-fafsa-state-deadlines.pdf" class="timelinelink" target="_blank">State deadlines</a> can be as early as February or March and money for these programs can run out, so apply as soon as possible.</li>
+              <li>Filling out the FAFSA is often the first step for qualifying for these programs, but you still have to apply directly to the agency administering the financial aid program in your state. <a href="https://www.nasfaa.org/State_Financial_Aid_Programs" class="timelinelink" target="_blank">Use this map</a> to find your agency.</li>
             </ul>
           </li>
       </div>
@@ -420,7 +466,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
           <li><b>When are scholarship applications due? </b>
             <ul>
               <li>Scholarships are self-serve — it’s up to you to research and apply for individual awards with different deadlines. Although many scholarship applications are due in January, deadlines can fall in any month of the year.</li>
-              <li>Some scholarships require that you apply at least a year before the start of the academic year, so it’s a good idea to start looking while you’re still a junior. Here’s a good place to <a href="https://www.careeronestop.org/toolkit/training/find-scholarships.aspx">start looking for scholarships</a>.</li>
+              <li>Some scholarships require that you apply at least a year before the start of the academic year, so it’s a good idea to start looking while you’re still a junior. Here’s a good place to <a href="https://www.careeronestop.org/toolkit/training/find-scholarships.aspx" class="timelinelink" target="_blank">start looking for scholarships</a>.</li>
             </ul>
           </li>
           <li><b>What can you use scholarship awards for?</b>
@@ -445,17 +491,17 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
           <li><b>College application deadlines</b>
             <ul>
               <li>After filing your FAFSA, it’s time to fill out college applications. Each school has its own deadline for applying, typically around Jan. 1 of your senior year.</li>
-              <li>Many selective schools allow students to apply in October or November for an “early action” or “early decision” admission plan. Check with the admissions office of each school you’re interested in attending for specifics. The <a href="https://bigfuture.collegeboard.org/get-in/applying-101/the-facts-about-applying-early-is-it-right-for-you">College Board</a>                and <a href="https://www.petersons.com/blog/early-action-vs-regular-decision-myths/">Peterson’s</a> have good overviews of factors to consider if you’re thinking of applying early.</li>
+              <li>Many selective schools allow students to apply in October or November for an “early action” or “early decision” admission plan. Check with the admissions office of each school you’re interested in attending for specifics. The <a href="https://bigfuture.collegeboard.org/get-in/applying-101/the-facts-about-applying-early-is-it-right-for-you" class="timelinelink" target="_blank">College Board</a>                and <a href="https://www.petersons.com/blog/early-action-vs-regular-decision-myths/" class="timelinelink" target="_blank">Peterson’s</a> have good overviews of factors to consider if you’re thinking of applying early.</li>
             </ul>
           </li>
           <li><b>Tips for applying to college</b>
             <ul>
               <li>It’s important to apply to more than one college, so you can compare several schools that are willing to admit you. Keep in mind that each application will cost you time and money — around $50, on average.</li>
-              <li>Here are some more <a href="https://www.credible.com/blog/student-loans/apply-to-college/">tips for applying to college</a>, and the pros and cons of applying for an early decision admission.</li>
+              <li>Here are some more <a href="https://www.credible.com/blog/student-loans/apply-to-college/" class="timelinelink" target="_blank">tips for applying to college</a>, and the pros and cons of applying for an early decision admission.</li>
             </ul>
             <li><b>What happens if you miss an application deadline?</b>
               <ul>
-                <li>If you procrastinated or were just unsure about whether you wanted to go to college in the fall, there are plenty of <a href="https://bigfuture.collegeboard.org/get-in/applying-101/late-applications">colleges that accept applications after Jan. 1</a>. Check with any schools that you’re interested in attending as some schools might have openings that they’re eager to fill, and will accept late applications.</li>
+                <li>If you procrastinated or were just unsure about whether you wanted to go to college in the fall, there are plenty of <a href="https://bigfuture.collegeboard.org/get-in/applying-101/late-applications" class="timelinelink" target="_blank">colleges that accept applications after Jan. 1</a>. Check with any schools that you’re interested in attending as some schools might have openings that they’re eager to fill, and will accept late applications.</li>
             </li>
             </ul>
       </div>
@@ -472,15 +518,15 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
         <ul>
           <li><b>What is a financial aid award letter?</b>
             <ul>
-              <li>Financial aid award letters arrive around the same time as admission offer letters. Assuming that you remembered to list them on your FAFSA, every college that offers to admit you should send you a <a href="https://www.credible.com/blog/student-loans/how-to-apply-for-student-loans/#six">financial aid award letter</a>.</li>
-              <li>The letter should provide all the information you need to compare the <a href="https://studentaid.ed.gov/sa/fafsa/next-steps/comparing-aid-offers">net price of attendance (total cost of attendance</a> minus any gift aid like grants or scholarships)
+              <li>Financial aid award letters arrive around the same time as admission offer letters. Assuming that you remembered to list them on your FAFSA, every college that offers to admit you should send you a <a href="https://www.credible.com/blog/student-loans/how-to-apply-for-student-loans/#six" class="timelinelink" target="_blank">financial aid award letter</a>.</li>
+              <li>The letter should provide all the information you need to compare the <a href="https://studentaid.ed.gov/sa/fafsa/next-steps/comparing-aid-offers" class="timelinelink" target="_blank">net price of attendance (total cost of attendance</a> minus any gift aid like grants or scholarships)
                 at all the schools you’re considering.</li>
             </ul>
           </li>
           <li><b>How to compare financial aid award letters</b>
             <ul>
               <li>Financial aid award letters can be difficult to compare because some schools don’t provide a total cost of attendance or make clear that loans are aid you have to repay. Here are some examples of how the letters might look and how you can
-                <a href="https://www.credible.com/blog/student-loans/financial-aid-award-letters/">compare financial aid award letters</a>.
+                <a href="https://www.credible.com/blog/student-loans/financial-aid-award-letters/" class="timelinelink" target="_blank">compare financial aid award letters</a>.
               </li>
           </li>
           </ul>
@@ -511,7 +557,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
           <li><b>Why you need to put down a tuition deposit</b>
             <ul>
               <li>A tuition deposit secures your place at your school of choice and demonstrates your commitment to showing up. Schools need to plan ahead so that they can provide the teaching staff and accommodations each incoming class will need.</li>
-              <li>Some students will put off their final decision by paying tuition deposits to more than one school, which is <a href="https://professionals.collegeboard.org/guidance/applications/ethics">considered unethical</a> unless you’ve been waitlisted
+              <li>Some students will put off their final decision by paying tuition deposits to more than one school, which is <a href="https://professionals.collegeboard.org/guidance/applications/ethics" class="timelinelink" target="_blank">considered unethical</a> unless you’ve been waitlisted
                 at a school.</li>
           </li>
           </ul>
@@ -566,18 +612,18 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
           </li>
           <li><b>What are the different payment options?</b>
             <ul>
-              <li>You’ll usually have the option to pay by check or electronic funds transfer from a bank account or 529 plan. If you can’t pay all at once, most schools offer <a href="http://www.finaid.org/otheraid/tuition.phtml">tuition installment plans</a> that let you make monthly payments over the rest of the academic year.</li>
+              <li>You’ll usually have the option to pay by check or electronic funds transfer from a bank account or 529 plan. If you can’t pay all at once, most schools offer <a href="http://www.finaid.org/otheraid/tuition.phtml" class="timelinelink" target="_blank">tuition installment plans</a> that let you make monthly payments over the rest of the academic year.</li>
   </ul>
-          <li><b>What if you can’t pay your bill?</b></li>
+          <li><b>What if you can’t pay your bill?</b>
            <ul>
               <li>Expect to pay interest charges on any past due balances on your tuition bill, which must be paid in full before you can register for future classes or obtain transcripts of your grades.</li>
-             <li>Most families take out student loans to pay for college. If you’re not seeing credits for federal student loans that you’re counting on to pay your bill, make sure you’ve completed the <a href="https://studentaid.ed.gov/sa/fafsa/next-steps/entrance-counseling">required entrance counseling</a> and signed a promissory note. </li>
+             <li>Most families take out student loans to pay for college. If you’re not seeing credits for federal student loans that you’re counting on to pay your bill, make sure you’ve completed the <a href="https://studentaid.ed.gov/sa/fafsa/next-steps/entrance-counseling" class="timelinelink" target="_blank">required entrance counseling</a> and signed a promissory note. </li>
 </ul>
-        <li><b>How to take out student loans</b></li>
+        <li><b>How to take out student loans</b>
            <ul>
-              <li>The first step to taking out federal loans is to fill out the <a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/">Free Application for Federal Student Aid</a> (FAFSA). You can fill out the FAFSA for the 2019-20 academic year until June 30, 2020.</li>
-             <li>If you’ve hit your <a href="https://www.credible.com/blog/student-loans/student-loan-limits/">federal student loan limits</a>, consider using federal PLUS or private student loans to cover unmet funding needs. These loans <a href="https://www.credible.com/blog/student-loans/student-loans-living-expenses/">can be used for living expenses</a>.</li>
-             <li>You should always <a href="https://www.credible.com/student-loans">compare rates from multiple lenders</a> before taking out a private loan to get the best terms for your situation.    </li>
+              <li>The first step to taking out federal loans is to fill out the <a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/" class="timelinelink" target="_blank">Free Application for Federal Student Aid</a> (FAFSA). You can fill out the FAFSA for the 2019-20 academic year until June 30, 2020.</li>
+             <li>If you’ve hit your <a href="https://www.credible.com/blog/student-loans/student-loan-limits/" class="timelinelink" target="_blank">federal student loan limits</a>, consider using federal PLUS or private student loans to cover unmet funding needs. These loans <a href="https://www.credible.com/blog/student-loans/student-loans-living-expenses/" class="timelinelink" target="_blank">can be used for living expenses</a>.</li>
+             <li>You should always <a href="https://www.credible.com/student-loans" class="timelinelink" target="_blank">compare rates from multiple lenders</a> before taking out a private loan to get the best terms for your situation.    </li>
 </ul>   
   </li>     
       </div>
@@ -587,22 +633,22 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
         <article>
     <div class="inner">
       <span class="highschool">
-        <span class="hsyear" id="freshmanco">Freshman Year of College</span>
+        <span class="collegeyear" id="freshmanco">Freshman Year of College</span>
       </span>
       <span class="spacer"></span>
     </div>
   </article>
   <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
           <li><b>Job opportunities</b>
             <ul>
-              <li>To help cover college costs, you have many choices like work-study programs, on-campus jobs, paid internships, and other off-campus options. Here are some of your <a href="https://www.credible.com/blog/student-loans/best-jobs-for-college/">best options for jobs while in school</a>.</li>
+              <li>To help cover college costs, you have many choices like work-study programs, on-campus jobs, paid internships, and other off-campus options. Here are some of your <a href="https://www.credible.com/blog/student-loans/best-jobs-for-college/" class="timelinelink" target="_blank">best options for jobs while in school</a>.</li>
             </ul>
           </li>
       </div>
@@ -611,9 +657,9 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     
     <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Submit the FAFSA for next year <i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Submit the FAFSA for next year <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -624,7 +670,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
              <li><b>How to take the work out of reapplying</b>
             <ul>
               <li>Fortunately, if you filled out the FAFSA the year before, you might be eligible to complete a Renewal FAFSA, an online form that pre-fills much of the information you provided the year before.</li>
-              </li>To reapply, log in as a returning user to <a href="https://studentaid.ed.gov/sa/fafsa">FAFSA on the Web</a> and click FAFSA Renewal.</li>           
+              </li>To reapply, log in as a returning user to <a href="https://studentaid.ed.gov/sa/fafsa" class="timelinelink" target="_blank">FAFSA on the Web</a> and click FAFSA Renewal.</li>           
           </li>
       </div>
     </div>
@@ -633,16 +679,16 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
  <article>
     <div class="inner">
       <span class="highschool">
-        <span class="hsyear" id="sophomoreco">Sophomore & Junior Year of College</span>
+        <span class="collegeyear" id="sophomoreco">Sophomore & Junior Year of College</span>
       </span>
       <span class="spacer"></span>
     </div>
   </article>
   <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Register for classes<i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Register for classes<i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -657,16 +703,16 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     
     <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Pay for classes <i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Pay for classes <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
           <li><b>What if you can’t pay your bill?</b>
             <ul>
-              <li>If you’ve hit your <a href="https://www.credible.com/blog/student-loans/student-loan-limits/">federal student loan limits</a>, consider using <a href="https://www.credible.com/blog/student-loans/use-private-student-loans-fill-college-funding-gaps/">federal PLUS or private student loans</a> to cover unmet funding needs. These loans <a href="https://www.credible.com/blog/student-loans/student-loans-living-expenses/">can be used for living expenses</a>.</li>
-              <li>You should always <a href="https://www.credible.com/student-loans">compare rates from multiple lenders</a> before taking out a private loan to get the best terms for your situation.    </li>
+              <li>If you’ve hit your <a href="https://www.credible.com/blog/student-loans/student-loan-limits/" class="timelinelink" target="_blank">federal student loan limits</a>, consider using <a href="https://www.credible.com/blog/student-loans/use-private-student-loans-fill-college-funding-gaps/" class="timelinelink" target="_blank">federal PLUS or private student loans</a> to cover unmet funding needs. These loans <a href="https://www.credible.com/blog/student-loans/student-loans-living-expenses/" class="timelinelink" target="_blank">can be used for living expenses</a>.</li>
+              <li>You should always <a href="https://www.credible.com/student-loans" class="timelinelink" target="_blank">compare rates from multiple lenders</a> before taking out a private loan to get the best terms for your situation.    </li>
             </ul>       
           </li>
       </div>
@@ -675,15 +721,15 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     
     <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
           <li><b>Job opportunities</b>
             <ul>
-              <li>To help cover college costs, you have many choices like work-study programs, on-campus jobs, paid internships, and other off-campus options. Here are some of your <a href="https://www.credible.com/blog/student-loans/best-jobs-for-college/">best options for jobs while in school</a>.</li>
+              <li>To help cover college costs, you have many choices like work-study programs, on-campus jobs, paid internships, and other off-campus options. Here are some of your <a href="https://www.credible.com/blog/student-loans/best-jobs-for-college/" class="timelinelink" target="_blank">best options for jobs while in school</a>.</li>
             </ul>
           </li>
       </div>
@@ -692,20 +738,20 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       
       <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Submit the FAFSA for next year <i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Submit the FAFSA for next year <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
           <li><b>Why you need to continue to submit the FAFSA</b>
             <ul>
-              <li>If you’re relying on federal student loans, grants, or work-study programs, you have to <a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/">submit the FAFSA</a> every year you’re in college. This is because your financial situation changes from year to year.</li>
+              <li>If you’re relying on federal student loans, grants, or work-study programs, you have to <a href="https://www.credible.com/blog/student-loans/applying-for-fafsa/" class="timelinelink" target="_blank">submit the FAFSA</a> every year you’re in college. This is because your financial situation changes from year to year.</li>
             </ul>
           <li><b>How to take the work out of reapplying</b>
             <ul>
               <li>Fortunately, if you filled out the FAFSA the year before, you might be eligible to complete a Renewal FAFSA, an online form that pre-fills much of the information you provided the year before.</li>
-              <li>To reapply, log in as a returning user to <a href="https://studentaid.ed.gov/sa/fafsa">FAFSA on the Web</a> and click FAFSA Renewal.</li>
+              <li>To reapply, log in as a returning user to <a href="https://studentaid.ed.gov/sa/fafsa" class="timelinelink" target="_blank">FAFSA on the Web</a> and click FAFSA Renewal.</li>
             </ul>
 </li>
       </div>
@@ -715,16 +761,16 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
          <article>
     <div class="inner">
       <span class="highschool">
-        <span class="hsyear" id="seniorco">Senior Year of College</span>
+        <span class="collegeyear" id="seniorco">Senior Year of College</span>
       </span>
       <span class="spacer"></span>
     </div>
   </article>
   <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Register for classes<i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Register for classes<i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
@@ -739,16 +785,16 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     
     <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Pay for classes <i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Pay for classes <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
           <li><b>What if you can’t pay your bill?</b>
             <ul>
-              <li>If you’ve hit your <a href="https://www.credible.com/blog/student-loans/student-loan-limits/">federal student loan limits</a>, consider using <a href="https://www.credible.com/blog/student-loans/use-private-student-loans-fill-college-funding-gaps/">federal PLUS or private student loans</a> to cover unmet funding needs. These loans <a href="https://www.credible.com/blog/student-loans/student-loans-living-expenses/">can be used for living expenses</a>.</li>
-              <li>You should always <a href="https://www.credible.com/student-loans">compare rates from multiple lenders</a> before taking out a private loan to get the best terms for your situation.    </li>
+              <li>If you’ve hit your <a href="https://www.credible.com/blog/student-loans/student-loan-limits/" class="timelinelink" target="_blank">federal student loan limits</a>, consider using <a href="https://www.credible.com/blog/student-loans/use-private-student-loans-fill-college-funding-gaps/" class="timelinelink" target="_blank">federal PLUS or private student loans</a> to cover unmet funding needs. These loans <a href="https://www.credible.com/blog/student-loans/student-loans-living-expenses/" class="timelinelink">can be used for living expenses</a>.</li>
+              <li>You should always <a href="https://www.credible.com/student-loans" class="timelinelink" target="_blank">compare rates from multiple lenders</a> before taking out a private loan to get the best terms for your situation.    </li>
             </ul>       
           </li>
       </div>
@@ -757,15 +803,15 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     
     <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
           <li><b>Job opportunities</b>
             <ul>
-              <li>To help cover college costs, you have many choices like work-study programs, on-campus jobs, paid internships, and other off-campus options. Here are some of your <a href="https://www.credible.com/blog/student-loans/best-jobs-for-college/">best options for jobs while in school</a>.</li>
+              <li>To help cover college costs, you have many choices like work-study programs, on-campus jobs, paid internships, and other off-campus options. Here are some of your <a href="https://www.credible.com/blog/student-loans/best-jobs-for-college/" class="timelinelink" target="_blank">best options for jobs while in school</a>.</li>
             </ul>
           </li>
       </div>
@@ -774,29 +820,29 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       
       <article>
     <div class="inner">
-      <span class="dot"> 
+      <span class="dotco"> 
       </span>
-      <h2 class="content-title">Research loan repayment plans  <i class="fa fa-fw fa-chevron-down float-right"></i>
+      <h2 class="college-title">Research loan repayment plans  <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
       <div class="content">
         <ul>
           <li><b>When do you have to start repaying your loans?</b>
             <ul>
               <li>Most federal student loans and private loans provide a 6-month “grace period” after you leave school before you have to start making monthly payments.</li>
-              <li>If you have <a href="https://www.credible.com/blog/student-loans/subsidized-vs-unsubsidized-student-loans-which-is-for-you/">federal direct subsidized loans</a>, interest doesn’t start racking up until after your grace period has ended.</li>
-              <li>With any other type of loan, interest starts accruing as soon as you take your loans out. So starting repayment as soon as you can will help you <a href="https://www.credible.com/blog/refinance-student-loans/pay-off-student-loans/">pay off your student loans faster</a>.</li>
-              <li>You can use our <a href="https://www.credible.com/blog/calculators/student-loan-repayment-calculator/">student loan repayment calculator</a> to figure out how long it will take you to pay off your total student loan balance.
+              <li>If you have <a href="https://www.credible.com/blog/student-loans/subsidized-vs-unsubsidized-student-loans-which-is-for-you/" class="timelinelink" target="_blank">federal direct subsidized loans</a>, interest doesn’t start racking up until after your grace period has ended.</li>
+              <li>With any other type of loan, interest starts accruing as soon as you take your loans out. So starting repayment as soon as you can will help you <a href="https://www.credible.com/blog/refinance-student-loans/pay-off-student-loans/" class="timelinelink" target="_blank">pay off your student loans faster</a>.</li>
+              <li>You can use our <a href="https://www.credible.com/blog/calculators/student-loan-repayment-calculator/" class="timelinelink" target="_blank">student loan repayment calculator</a> to figure out how long it will take you to pay off your total student loan balance.
 </li>
             </ul>
           <li><b>What are the different repayment options?</b>
             <ul>
               <li>There are many options for repaying federal student loans, ranging from the standard 10-year repayment plan to extended or income-driven repayment plans.</li>
               <li>If you have private student loans, you picked a repayment plan when you took out your loan. If you decided to defer or make partial payments while in school, your monthly payment might increase.</li>
-              <li>Many borrowers <a href="https://www.credible.com/refinance-student-loans/">choose to refinance their student loans</a> at lower rates after graduation.</li>
+              <li>Many borrowers <a href="https://www.credible.com/refinance-student-loans/" class="timelinelink" target="_blank">choose to refinance their student loans</a> at lower rates after graduation.</li>
             </ul>
-          <li><b>What if you can’t afford your monthly payments?</b></li><ul>
-          <li>If you’re having trouble making the monthly payments on federal student loans, income-driven repayment plans can make your payments more manageable by stretching them out over a longer period of time. <a href="https://www.credible.com/blog/refinance-student-loans/income-based-repayment/">Income-driven repayment plans</a> might provide loan forgiveness if you haven’t paid off your loan after 10, 20, or 25 years.</li>
-          <li>You might be able to <a href="https://www.credible.com/blog/refinance-student-loans/3-ways-lower-monthly-student-loan-payment/">lower your monthly payments</a> on your student loans by extending your repayment term. Just remember that any repayment plan that stretches out your monthly payments over a longer period of time without an interest rate reduction might increase your total repayment costs.</li>
+          <li><b>What if you can’t afford your monthly payments?</b><ul>
+          <li>If you’re having trouble making the monthly payments on federal student loans, income-driven repayment plans can make your payments more manageable by stretching them out over a longer period of time. <a href="https://www.credible.com/blog/refinance-student-loans/income-based-repayment/" class="timelinelink" target="_blank">Income-driven repayment plans</a> might provide loan forgiveness if you haven’t paid off your loan after 10, 20, or 25 years.</li>
+          <li>You might be able to <a href="https://www.credible.com/blog/refinance-student-loans/3-ways-lower-monthly-student-loan-payment/" class="timelinelink" target="_blank">lower your monthly payments</a> on your student loans by extending your repayment term. Just remember that any repayment plan that stretches out your monthly payments over a longer period of time without an interest rate reduction might increase your total repayment costs.</li>
           </ul>
             </li>
       </div>
@@ -825,7 +871,7 @@ $("article").click(function(e) {
     .children("i")
     .toggleClass("fa-chevron-down")
     .toggleClass("fa-chevron-right");
-    setTimeout(refreshtlheight, 4000);
+    setTimeout(refreshtlheight, 450);
   console.log(tlheight);
 });
 
