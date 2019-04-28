@@ -852,6 +852,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
 var tlheight = $('#timeline').outerHeight(true);
 function refreshtlheight(){
   tlheight = $('#timeline').outerHeight(true);
+  console.log('setting tlheight to: ' + tlheight);
   $('#page-block-rof4bc7znfc').height(tlheight);
 }
 $("article").click(function(e) {
@@ -865,7 +866,8 @@ $("article").click(function(e) {
     .children("i")
     .toggleClass("fa-chevron-down")
     .toggleClass("fa-chevron-right");
-    setTimeout(refreshtlheight, 450);
+    var tlheightinterval = setInterval(function(){refreshtlheight();}, 20);
+    setTimeout(function(){clearInterval(tlheightinterval);},450);
   console.log(tlheight);
 });
 $(document).ready(function(){
