@@ -8,15 +8,12 @@ body {
   font-family: sailec-regular, sans-serif;
   overflow-x:hidden; /* hides the extra whitespace problem*/
 }
-
 .timelinelink { 
   color:#EB7925;
 }
-
 .timelinelink:hover, .timelinelink:visited{
 color: #FBA929;
 }
-
 ul {
 list-style: disc inside none;
 text-align: left;
@@ -29,7 +26,6 @@ text-indent: -22px;
 /* .indent {
 text-indent: ;
 }  Where was this from? It's used nowhere in the html*/
-
 .content {
   font-family:sailec-regular;
   display:none;
@@ -42,7 +38,6 @@ text-indent: ;
  /* This fixed so many of the things. (ul has 1em margins by default, it created unwanted white space) */
 /*   border-radius: 0 0 6px 6px; */
 }
-
 li { 
 font-size:15px;
   line-height: 22px;
@@ -123,16 +118,14 @@ article:after {
   font-family: sailec-bold;
   font-size: 1.5em;
   font-weight:600;
-  color: #1195a1;
+  color: #202022;
 }
-
 .collegeyear {
   font-family: sailec-bold;
   font-size: 1.5em;
   font-weight:600;
-  color: #04B499;
+  color: #202022;
 }
-
 .date {
   display: block;
   width: 80px;
@@ -855,15 +848,12 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
     
 </section>
 
-
-<script>
+<script> 
 var tlheight = $('#timeline').outerHeight(true);
-
 function refreshtlheight(){
   tlheight = $('#timeline').outerHeight(true);
   $('#page-block-rof4bc7znfc').height(tlheight);
 }
-
 $("article").click(function(e) {
   $(this)
     .children()
@@ -878,7 +868,6 @@ $("article").click(function(e) {
     setTimeout(refreshtlheight, 450);
   console.log(tlheight);
 });
-
 $(document).ready(function(){
   refreshtlheight();
   $('#page-block-rof4bc7znfc').height(tlheight);
