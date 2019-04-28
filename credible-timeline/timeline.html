@@ -855,21 +855,29 @@ function refreshtlheight(){
   console.log('setting tlheight to: ' + tlheight);
   $('#page-block-rof4bc7znfc').height(tlheight);
 }
-$("article").click(function(e) {
-  $(this)
-    .children()
-    .children(".content")
+$('.content-title').click(function(e){
+    $(this)
+    .siblings(".content")
     .slideToggle();
   $(this)
-    .children()
-    .children("h2")
     .children("i")
     .toggleClass("fa-chevron-down")
     .toggleClass("fa-chevron-right");
     var tlheightinterval = setInterval(function(){refreshtlheight();}, 20);
     setTimeout(function(){clearInterval(tlheightinterval);},450);
-  console.log(tlheight);
 });
+$('.college-title').click(function(e){
+    $(this)
+    .siblings(".content")
+    .slideToggle();
+  $(this)
+    .children("i")
+    .toggleClass("fa-chevron-down")
+    .toggleClass("fa-chevron-right");
+    var tlheightinterval = setInterval(function(){refreshtlheight();}, 20);
+    setTimeout(function(){clearInterval(tlheightinterval);},450);
+});
+
 $(document).ready(function(){
   refreshtlheight();
   $('#page-block-rof4bc7znfc').height(tlheight);
