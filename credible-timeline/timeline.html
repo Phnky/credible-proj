@@ -310,7 +310,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       </span>
         <h2 class="content-title">Build your savings <i class="fa fa-fw fa-chevron-down float-right"></i>
         </h2>
-      <div class="content">
+      <div class="content" id="bys-content">
         <ul>
           <li><b>529 plans</b>
             <ul>
@@ -356,7 +356,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       </span>
       <h2 class="content-title">Research colleges <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
-      <div class="content">
+      <div class="content" id="rc-content">
         <ul>
           <li><b>Academic quality</b>
             <ul>
@@ -419,7 +419,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       </span>
       <h2 class="content-title">Apply for aid by filling out the FAFSA <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
-      <div class="content">
+      <div class="content" id='fafsa-content'>
         <ul>
           <li><b>What is the FAFSA?</b>
             <ul>
@@ -600,7 +600,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       </span>
       <h2 class="content-title">Register for classes <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
-      <div class="content">
+      <div class="content" id="rfc-content">
         <ul>
           <li><b>Sign up as soon as possible</b>
             <ul>
@@ -665,7 +665,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       </span>
       <h2 class="college-title">Find a job or work-study opportunity <i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
-      <div class="content">
+      <div class="content" id="ws-content">
         <ul>
           <li><b>Job opportunities</b>
             <ul>
@@ -711,7 +711,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       </span>
       <h2 class="college-title">Register for classes<i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
-      <div class="content">
+      <div class="content" id='rfc-sjc-content'>
         <ul>
           <li><b>Plan ahead to graduate on time</b>
             <ul>
@@ -793,7 +793,7 @@ x hsyear is being shifted on instapage //.highschool was text-aligned to center
       </span>
       <h2 class="college-title">Register for classes<i class="fa fa-fw fa-chevron-down float-right"></i>
       </h2>
-      <div class="content">
+      <div class="content" id='rfc-sc-content'>
         <ul>
           <li><b>Plan ahead to graduate on time</b>
             <ul>
@@ -900,6 +900,50 @@ $('.college-title').click(function(e){
     .toggleClass("fa-chevron-right");
     var tlheightinterval = setInterval(function(){refreshtlheight();}, 20);
     setTimeout(function(){clearInterval(tlheightinterval);},450);
+});
+
+//navigation anchors
+$('#link-917trrsp8ss').click(function(e) {
+    $("#bys-content").slideDown();
+});
+$('#element-2100').click(function(e) {
+    $("#bys-content").slideDown();
+});
+$('#link-2uynnuekmem').click(function(e){
+  $('#rc-content').slideDown();
+});
+$('#element-2126').click(function(e){
+  $('#rc-content').slideDown();
+});
+$('#link-uiy6ycybq2').click(function(e){
+  $('#fafsa-content').slideDown();
+});
+$('#element-2132').click(function(e){
+  $('#fafsa-content').slideDown();
+});
+$('#link-fuq8tx2dryc').click(function(e){
+  $('#rfc-content').slideDown();
+});
+$('#element-2072').click(function(e){
+  $('#rfc-content').slideDown();
+});
+$('#link-6mfr9zsv8of').click(function(e) {
+    $('#ws-content').slideDown();
+});
+$('#element-2055').click(function(e) {
+    $('#ws-content').slideDown();
+});
+$('#link-kvgmuic9y3a').click(function(e) {
+    $('#rfc-sjc-content').slideDown();
+});
+$('#element-2060').click(function(e) {
+    $('#rfc-sjc-content').slideDown();
+});
+$('#link-ospae5bou4o').click(function(e) {
+    $('#rfc-sc-content').slideDown();
+});
+$('#element-2065').click(function(e) {
+    $('#rfc-sc-content').slideDown();
 });
 
 $(document).ready(function(){
